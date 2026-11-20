@@ -33,23 +33,13 @@ fliXer investigates the transformation of relevant semantic content into represe
 4. Produce inspectable validation outcomes, including unresolved or unsupported cases.
 5. Return structured feedback to the consuming AI system or human reviewer.
 
-```text
-        Generated statements / semantic information
-                            |
-                            v
-              Proposition extraction
-                            |
-                            v
-          Explicit rules and constraints
-                            |
-                            v
-             Consistency / inference checks
-                            |
-                            v
-          Findings + evidence + uncertainty
-                            |
-                            v
-                  Human / AI review
+```mermaid
+flowchart TD
+    A[Generated statements / semantic information] --> B[Proposition extraction]
+    B --> C[Explicit rules and constraints]
+    C --> D[Consistency / inference checks]
+    D --> E[Findings + evidence + uncertainty]
+    E --> F[Human / AI review]
 ```
 
 The diagram is conceptual. The choice of formalism, rule engine, semantics, and integration interface remains subject to implementation documentation and validation.
